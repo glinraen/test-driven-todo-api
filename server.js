@@ -93,7 +93,11 @@ app.delete('/api/todos/:id', function destroy(req, res) {
    * id specified in the route parameter (:id) and respond
    * with success.
    */
-   
+  var index = todos.indexOf();
+  if (index > -1) {
+    todos.splice(index, _id);
+    res.json(todos.id);
+}
 });
 
 /**********
